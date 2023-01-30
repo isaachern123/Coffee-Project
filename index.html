@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="bg"> Coffee </div>
+        <div class="fg"> Coffee </div>
+    </div>
+    <hr>
+
+    <div class="d-flex justify-content-around flex-wrap" id="coffees"></div>
+
+    <form name="roastSelectionList" class="w-75 text-center m-auto">
+
+        <div class="mb-3">
+            <label class="form-label sub-header"> Coffee Name</label>
+            <input class="form-control" id="text-submit" onkeyup="searchCoffees(value)">
+        </div>
+
+        <label class="sub-header"> Roast</label>
+
+        <select id="roast-selection" class="form-select active" aria-label="Default select example" onchange="renderCoffees()">
+
+            <option value="all"> all</option>
+            <option value="light"> light</option>
+            <option value="medium"> medium</option>
+            <option value="dark"> dark</option>
+        </select>
+        <br>
+        <button type="reset" id="submit" class="btn btn-warning btn-md w-100"> Choose your Roast</button>
+        <br>
+
+    </form>
+    <br>
+    <div class="wrapper">
+        <div class="bg"> Add A Coffee </div>
+        <div class="fg"> Add A Coffee </div>
+    </div>
+    <form class="w-75 text-center m-auto">
+        <label class="sub-header" for="add-coffee-roast-select"> Roast</label>
+        <select id="add-coffee-roast-select" class="form-select active" aria-label="Default select example">
+            <option value="light"> light</option>
+            <option value="medium"> medium</option>
+            <option value="dark"> dark</option>
+        </select>
+    <br>
+        <div class="mb-3">
+            <label for="add-coffee-name" class="form-label new-coffee sub-header"> Coffee Name</label>
+            <input id="add-coffee-name" class="form-control new-coffee-roast-select">
+        </div>
+
+        <button type="button" id="add-coffee" class="btn btn-warning btn-md w-100"> Create your Joe</button>
+
+    </form>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
